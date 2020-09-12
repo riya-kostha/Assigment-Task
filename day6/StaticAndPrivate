@@ -1,0 +1,39 @@
+#include<iostream>
+
+class A {
+
+private :
+	float var=10.8f;
+
+public :
+	int x, y;
+	static int c;
+	static const int z=300;		//we cant intialize static variable inside class without making them const;
+
+	void print()
+	{
+		std::cout << "value of x=" << x<<"  value of y="<<y<<"\nvalue of static variable z"<<z;
+		//std::cout << "value of var=" << var;
+	}
+
+	void acessPrivateVariale()
+	{
+		std::cout << "private variable value is" << var;
+	}
+
+
+};
+int  main()
+{
+	
+	A obj,obj1;
+	obj.x = 90;
+	obj.y = 100;
+	
+	obj.print();
+	obj.acessPrivateVariale();
+	obj1.x = 10;
+	obj1.y = 20;
+	obj1.print();
+	return 0;
+}

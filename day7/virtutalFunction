@@ -1,0 +1,36 @@
+#include<iostream>
+class A {
+public:
+	int x;
+	virtual	void print()
+	{
+		int var;
+		std::cout << "\nbase class";
+	}
+	virtual	void fun1()
+	{
+		std::cout << "\nbase class";
+	}
+	virtual	void fun2()
+	{
+		std::cout << "\nbase class";
+	}
+};
+class B :public A
+{
+public:
+	int x;
+	void print() {
+
+	}
+
+	
+};
+int main()
+{
+
+	
+	std::cout <<"Size of base class"<< sizeof(A);
+	std::cout << "\nsize of derived class"<<sizeof(B);
+	return 0;
+}
