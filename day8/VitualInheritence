@@ -1,0 +1,52 @@
+
+#include<iostream>
+class A {
+public:
+	int data;
+	A() :data(999) {}
+	A(int val) :data(val) {}
+
+
+};
+class B :virtual public A{
+
+public:
+	int data1;
+	B(int val):A(val),data1(val){}
+	
+	
+};
+class C: virtual public A {
+
+public:
+	int data2;
+	C(int val) :A(val),data2(val) {}
+
+
+};
+
+class D :public B, public C
+{
+public:
+	D(int v1,int v2):B(v1),C(v2){}
+
+};
+int main()
+{
+	A a;
+	B b=B(45);
+	C c = C(89);
+	//std::cout << a.data;
+	//A a1 = A(7);
+	//std::cout << "\n"<<a1.data;
+	//B b=B(78);
+	D d = D(10, 23);
+	/*std::cout << "\n"<<d.data;
+	std::cout << "\n" << d.data2;
+	std::cout << "\n" << d.data1;
+	std::cout << "\n" << d.data;
+	*/std::cout << "\n" << b.data;
+	std::cout << "\n" << d.data;
+	std::cout << "\n" << c.data;
+	return 0;
+}
